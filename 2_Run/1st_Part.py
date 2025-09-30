@@ -58,3 +58,7 @@ total = principle * pow((1 + rate / 100), time)
 print(total)
 '''
 
+
+for x in reversed(range(1,11)):
+    print(x)
+print('Hap')
