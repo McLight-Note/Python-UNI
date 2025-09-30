@@ -84,3 +84,31 @@ def display_invoice(username, amount, due_date):
 
 display_invoice('BroCode', 42.50, "01/02")'''
 
+'''
+def add(*args):
+    total = 0
+    for arg in args:
+        total += arg
+    return total
+
+print(add(3,2,1,3,1,3,3,34))'''
+
+'''def print_address(**kwargs):
+    for key,value in kwargs.times():
+        print(f"{key}:{value}")
+
+print_address(street='123 Fake St.',
+              state='Detroit',
+              city='MI',
+              zip='54321')'''
+
+'''def shipping_label(*args, **kwargs):
+    for arg in args:
+        print(arg, end=" ")
+    print()
+
+    print(f"{kwargs.get('street')}")
+    print(f"{kwargs.get('city'), {kwargs.get('zip')}}")
+
+shipping_label("Muhamad", 'Sodiq', street='Oltinkol', city='Seoul', zip=1213)'''
+
