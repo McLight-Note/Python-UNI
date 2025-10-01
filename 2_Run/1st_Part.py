@@ -121,7 +121,7 @@ fruits = ['apple', 'banana', 'orange', 'coconut']
 fruits = [fruit.upper() for friut in fruits]
 """
 
-def is_weekend(day):
+'''def is_weekend(day):
     match day:
         case "Sunday" | "Saturday":
             return True
@@ -129,4 +129,10 @@ def is_weekend(day):
             return False
         case _:
             return False
-print(is_weekend('Sunday'))
+print(is_weekend('Sunday'))'''
+
+import example
+
+result = example.pi
+result = example.cube(14)
+print(result)
