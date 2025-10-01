@@ -112,3 +112,21 @@ print_address(street='123 Fake St.',
 
 shipping_label("Muhamad", 'Sodiq', street='Oltinkol', city='Seoul', zip=1213)'''
 
+# doubles = [x * 2 for x in range(1, 11)]
+# triples = [y * 3 for y in range(1, 11)]
+# squares = [pow(square, 2) for square in range(1, 11)]
+
+"""
+fruits = ['apple', 'banana', 'orange', 'coconut']
+fruits = [fruit.upper() for friut in fruits]
+"""
+
+def is_weekend(day):
+    match day:
+        case "Sunday" | "Saturday":
+            return True
+        case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+            return False
+        case _:
+            return False
+print(is_weekend('Sunday'))
