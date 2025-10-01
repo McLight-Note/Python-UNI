@@ -131,8 +131,20 @@ fruits = [fruit.upper() for friut in fruits]
             return False
 print(is_weekend('Sunday'))'''
 
-import example
+'''import example
 
 result = example.pi
 result = example.cube(14)
-print(result)
+print(result)'''
+
+
+def favourite_food(food):
+    print(f'Your favourite food is {food}')
+
+def main():
+    print('This is the main file')
+    favourite_food("pizza")
+    print('Good Bye!')
+
+if __name__ == '__main__':
+    main()
