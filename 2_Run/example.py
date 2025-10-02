@@ -19,7 +19,7 @@ def fav_drink(drink):
 
 def main():
     print('This is example.py')
-    favourite_food('pizza's)
+    favourite_food('pizza"s')
     fav_drink('coffee')
     print('GB')
 
