@@ -121,7 +121,8 @@ fruits = ['apple', 'banana', 'orange', 'coconut']
 fruits = [fruit.upper() for friut in fruits]
 """
 
-'''def is_weekend(day):
+'''
+def is_weekend(day):
     match day:
         case "Sunday" | "Saturday":
             return True
@@ -147,8 +148,12 @@ def main():
     print('Good Bye!')
 
 if __name__ == '__main__':
-    main()'''
+    main()
+'''
 
+# @property method
+
+'''
 class Rectangle:
     def __init__(self, width, height):
         self._width = width
@@ -195,3 +200,38 @@ print(rectangle1.height)
 
 del rectangle1.width
 del rectangle1.height
+'''
+
+# Decorator functions
+'''
+def add_sprinkles(func):
+    def wrapper(*args, **kwargs):
+        print('** You add sprinkles **')
+        func(*args, **kwargs)
+    return wrapper
+
+def add_fudge(func):
+    def wrapper(*args, **kwargs):
+        print('** You add fudge **')
+        func(*args, **kwargs)
+    return wrapper
+@add_sprinkles
+@add_fudge
+def get_ice_cream(flavor):
+    print(f'Here is your {flavor} ice cream __')
+
+get_ice_cream('vanilla')
+'''
+
+# exception: 1.try; 2.except; 3.finally
+try:
+    number = int(input('Enter a number'))
+    print(1/number)
+except ZeroDivisionError:
+    print('You cant devide by zero ODOP!')
+except ValueError:
+    print('Enter only numbers')
+except Exception:
+    print('Something went wrong')
+finally:
+    print('DO some cleanup here!')
