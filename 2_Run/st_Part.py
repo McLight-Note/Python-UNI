@@ -138,7 +138,7 @@ result = example.cube(14)
 print(result)'''
 
 
-def favourite_food(food):
+'''def favourite_food(food):
     print(f'Your favourite food is {food}')
 
 def main():
@@ -147,4 +147,20 @@ def main():
     print('Good Bye!')
 
 if __name__ == '__main__':
-    main()
+    main()'''
+
+class Rectangle:
+    def __init__(self, width, height):
+        self._width = width
+        self._height = height
+
+    @property
+    def width():
+        pass
+    
+    @property
+    def height():
+        pass
+
+rectangle1 = Rectangle(3,4)
+print(rectangle1.width)
