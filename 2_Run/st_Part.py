@@ -224,7 +224,7 @@ get_ice_cream('vanilla')
 '''
 
 # exception: 1.try; 2.except; 3.finally
-try:
+'''try:
     number = int(input('Enter a number'))
     print(1/number)
 except ZeroDivisionError:
@@ -234,4 +234,13 @@ except ValueError:
 except Exception:
     print('Something went wrong')
 finally:
-    print('DO some cleanup here!')
+    print('DO some cleanup here!')'''
+
+import os 
+
+file_path = 'test.txt'
+
+if os.path.exists(file_path):
+    print(f"The location '{file_path} exist'")
+else:
+    print('The location doesnt exist')
