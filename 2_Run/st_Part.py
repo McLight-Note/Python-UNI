@@ -252,10 +252,48 @@ else:
 
 # Writing files
 
-txt_data = 'I like pizza!'
-
+'''txt_data = 'I like pizza!'
+employees = ['Ali1', 'Ali2', 'Ali3', 'Ali4']
 file_path = 'output.txt'
 
-with open(file_path, 'w') as file:
-    file.write(txt_data)
-    print(f'txt file "{file_path}" was created')
+try:
+    with open(file_path,'a') as file:
+        for employee in employees:
+            file.write(employee + ' ')
+        print(f'txt file "{file_path}" was created')
+except FileExistsError:
+    print('That file already exists!')'''
+
+'''import json
+
+employee = {
+    'name': 'Ali1',
+    'age': 30,
+    'job': 'cook'
+}
+
+file_path = 'output2.json'
+
+try:
+    with open(file_path, 'w') as file:
+        json.dump(employee, file, indent=4)
+        print('Json file was created')
+except FileExistsError:
+    print('that already exists')'''
+
+import csv
+employees = [['Name', 'Age', "Job"],
+             ['Ali', 30, 'Cook'],
+             ['Bobur', 40, 'Cashier'],
+             ['Snady', 25, 'Scientist']]
+
+file_path = 'output3.csv'
+
+try:
+    with open(file_path, 'w', newline='') as file:
+        writer = csv.writer(file)
+        for row in employees:
+            writer.writerow(row)
+        print(f'csv file "{file} was created"')
+except FileExistsError:
+    print('That file already exists! ')
