@@ -236,11 +236,26 @@ except Exception:
 finally:
     print('DO some cleanup here!')'''
 
-import os 
+# Working with files
+'''import os 
 
 file_path = 'test.txt'
 
 if os.path.exists(file_path):
     print(f"The location '{file_path} exist'")
+    if os.path.isfile(file_path):
+        print('That is a file')
+    elif os.path.isdir(file_path):
+        print('That is a directory')
 else:
-    print('The location doesnt exist')
+    print('The location doesnt exist')'''
+
+# Writing files
+
+txt_data = 'I like pizza!'
+
+file_path = 'output.txt'
+
+with open(file_path, 'w') as file:
+    file.write(txt_data)
+    print(f'txt file "{file_path}" was created')
