@@ -371,3 +371,5 @@ chore2.start()
 
 chore3 = threading.Thread(target=get_mail)
 chore3.start()
+
+print('All chores are complete')
