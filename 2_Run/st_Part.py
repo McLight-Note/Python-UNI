@@ -348,6 +348,7 @@ print(now)
 '''
 
 # multithreading
+'''
 import threading
 import time
 
@@ -376,3 +377,25 @@ chore1.join()
 chore2.join()
 chore3.join()
 print('All chores are complete')
+'''
+
+# PyQt5 Intro
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtGui import QIcon
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle('My Cool First GUI')
+        self.setGeometry(500,300,400,400)
+        self.setWindowIcon(QIcon('007.jpg'))
+    
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()
