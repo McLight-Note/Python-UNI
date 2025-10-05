@@ -380,16 +380,28 @@ print('All chores are complete')
 '''
 
 # PyQt5 Intro
+'''
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QFont
+from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('My Cool First GUI')
         self.setGeometry(500,300,400,400)
-        self.setWindowIcon(QIcon('007.jpg'))
+
+        label = QLabel('Hello', self)
+        label.setFont(QFont('Arial',30))
+        label.setGeometry(0,0,500,100)
+        label.setStyleSheet("color: 292929;"
+                            "background-color: #6fdcf7;"
+                            'font-wegith: bold;'
+                            'font-style: italic;'
+                            'text-decoration: underline;')
+        # label.setAlignment(Qt.AlignTop) # aligned to the top
+        label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
     
 def main():
     app = QApplication(sys.argv)
@@ -399,3 +411,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
