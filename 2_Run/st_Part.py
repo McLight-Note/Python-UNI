@@ -351,7 +351,7 @@ print(now)
 import threading
 import time
 
-def wald_dog():
+def walk_dog():
     time.sleep(8)
     print('You finish walking the dog')
 
@@ -363,6 +363,11 @@ def get_mail():
     time.sleep(4)
     print('You get the mail')
 
-wald_dog()
-take_out_trash()
-get_mail()
+chore1 = threading.Thread(target=walk_dog)
+chore1.start()
+
+chore2 = threading.Thread(target=take_out_trash)
+chore2.start()
+
+chore3 = threading.Thread(target=get_mail)
+chore3.start()
