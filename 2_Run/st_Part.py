@@ -413,7 +413,6 @@ if __name__ == '__main__':
     main()
 '''
 
-'''
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt5.QtGui import QPixmap
@@ -444,4 +443,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    '''
