@@ -111,6 +111,7 @@ print(Solution().findMaxConsecutiveOnes([1,0,1,1,0,1]))
 '''
 
 # Problem - 7
+'''
 class Solution(object):
     def duplicateZeros(self, arr):
         n = len(arr)
@@ -128,3 +129,28 @@ class Solution(object):
                     arr[j] = 0
             i -= 1
             j -= 1
+'''
+
+# Problem - 8
+class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        """
+        :type nums1: List[int]
+        :type m: int
+        :type nums2: List[int]
+        :type n: int
+        :rtype: None Do not return anything, modify nums1 in-place instead.
+        """
+        # Set pointers to the end of the actual elements
+        i = m - 1
+        j = n - 1
+        k = m + n - 1  # Last index of nums1
+
+        while j >= 0:  # until nums2 elements are merged
+            if i >= 0 and nums1[i] > nums2[j]:
+                nums1[k] = nums1[i]
+                i -= 1
+            else:
+                nums1[k] = nums2[j]
+                j -= 1
+            k -= 1
